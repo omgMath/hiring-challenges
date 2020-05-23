@@ -7,4 +7,8 @@ export class StdoutHandler implements IHandler {
     public async handle(payload: any): Promise<void> {
         log.info(payload);
     }
+
+    public async flush() {
+        // NOP
+    }
 }

@@ -39,12 +39,15 @@ export class KafkaConsumer {
                 const ids = _.keys(this.handlers);
                 try {
                     const parsed = JSON.parse(message.value.toString());
-                    for (const id of ids) {
-                        try {
-                            this.handlers[id].handle(parsed);
-                        }
-                        catch (err) {
-                            log.error("KafkaConsumer - Error executing handler with id: " + id);
+                    // Optimization opportunity: JSON.parse takes too long - extract ts and uid keys manually
+                    if (parsed) {
+                        for (const id of ids) {
+                            try {
+                                this.handlers[id].handle(parsed);
+                            }
+                            catch (err) {
+                                log.error("KafkaConsumer - Error executing handler with id: " + id);
+                            }
                         }
                     }
                 }
@@ -53,5 +56,13 @@ export class KafkaConsumer {
                 }
             }
         });
+    }
+
+    public async close() {
+        const ids = _.keys(this.handlers);
+        for (const id of ids) {
+            this.handlers[id].flush();
+        }
+        this.consumer.disconnect();
     }
 }

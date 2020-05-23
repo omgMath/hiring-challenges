@@ -2,6 +2,7 @@ import {IHandlerConfig} from "../core/@def";
 
 export interface IHandler {
     handle(payload: any): Promise<void>;
+    flush(): Promise<void>;
 }
 
 export interface IHandlerFactory {
