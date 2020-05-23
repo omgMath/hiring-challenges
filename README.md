@@ -1,7 +1,8 @@
 # Data Engineer Challenge
 ## Setup
 - Make sure you have a current version of nodejs and npm installed
-- Clone the repository and run the following commands
+- Clone the repository: `git clone https://github.com/omgMath/hiring-challenges.git`
+- `cd hiring-challenges`
 - `npm install`
 - `npm run build`
 
