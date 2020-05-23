@@ -10,10 +10,11 @@ interface IUniqeCounts {
     duration: number; // ms
     uniques: Set<any>;
     cancelTimeout: NodeJS.Timeout;
+    processed: number;
 }
 
 interface IDataProvider {
-    (ts: number): Omit<IUniqeCounts, "uniques" | "cancelTimeout">;
+    (ts: number): Omit<IUniqeCounts, "uniques" | "cancelTimeout" | "processed">;
 }
 
 export interface ICountDict extends IDictionary<IUniqeCounts> {
@@ -36,11 +37,12 @@ export class UniqCounter implements IHandler {
         const ts = payload[this.config.timestampKey];
         _.forEach(this.config.intervals, interval => {
             const {start, duration} = this.dataProviders[interval](ts);
-            const current = this.counts[interval][start] || {start: null, duration: null, uniques: new Set(), cancelTimeout: null};
+            const current = this.counts[interval][start] || {start: null, duration: null, uniques: new Set(), cancelTimeout: null, processed: 0};
             if (!current.start) {
                 current.start = start;
                 current.duration = duration;
             }
+            current.processed++;
             current.uniques.add(id);
             if (current.cancelTimeout) {
                 clearTimeout(current.cancelTimeout);
@@ -54,12 +56,12 @@ export class UniqCounter implements IHandler {
         if (interval && start) {
             const data = this.counts[interval][start];
             console.log({start: data.start, duration: data.duration, count: data.uniques.size});
+            console.log("Processed: " + data.processed);
             delete this.counts[interval][start];
         }
         else {
             console.log("Not implemented");
         }
-
     }
 
     public getDataProvider(interval: ECountInterval): IDataProvider {
@@ -96,11 +98,11 @@ export class UniqCounter implements IHandler {
                 return (ts: number) => {
                     return {
                         start: format(ts * 1000, "yyyy"),
-                        duration: day * 365 // FIXME: Edge case
+                        duration: day * 365 // TODO: Edge case
                     };
                 };
             }
-            default: throw new Error("Invalid interval"); // per minute
+            default: throw new Error("Invalid interval");
         }
     }
 }
