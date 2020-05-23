@@ -1,0 +1,758 @@
+Statistical profiling result from isolate-0x3d019f0-29545-v8.log, (151478 ticks, 462 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  124467   82.2%          /usr/bin/node
+   8750    5.8%          /lib/x86_64-linux-gnu/libc-2.27.so
+    132    0.1%          [vdso]
+     65    0.0%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+     30    0.0%          /lib/x86_64-linux-gnu/libm-2.27.so
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+   1007    0.7%    5.6%  LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    947    0.6%    5.3%  LazyCompile: *toString /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:470:43
+    528    0.3%    2.9%  LazyCompile: *divide /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:925:39
+    525    0.3%    2.9%  LazyCompile: *fromString /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:220:20
+    461    0.3%    2.6%  Stub: js_to_wasm:iiii:i
+    409    0.3%    2.3%  LazyCompile: *fromValue /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:280:19
+    369    0.2%    2.0%  LazyCompile: *fromNumber /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:154:20
+    352    0.2%    2.0%  LazyCompile: *multiply /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:840:43
+    311    0.2%    1.7%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+    253    0.2%    1.4%  LazyCompile: *decodeRecords /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/recordBatch/v0/decoder.js:84:23
+    239    0.2%    1.3%  LazyCompile: *equals /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:605:39
+    227    0.1%    1.3%  Function: *wasm-function[2]
+    223    0.1%    1.2%  LazyCompile: *add /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:785:33
+    170    0.1%    0.9%  LazyCompile: *readVarInt /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:174:13
+    166    0.1%    0.9%  LazyCompile: *not /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:1083:33
+    144    0.1%    0.8%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:23:57
+    126    0.1%    0.7%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+    109    0.1%    0.6%  LazyCompile: *readVarLong /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:188:14
+    107    0.1%    0.6%  LazyCompile: *get /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:4:67
+    106    0.1%    0.6%  LazyCompile: *commitOffsetsIfNecessary /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/offsetManager/index.js:181:33
+     72    0.0%    0.4%  Stub: js_to_wasm::i
+     69    0.0%    0.4%  LazyCompile: *slice buffer.js:1100:40
+     51    0.0%    0.3%  LazyCompile: *get /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:4:67
+     44    0.0%    0.2%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:61:46
+     43    0.0%    0.2%  LazyCompile: *step /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:26:22
+     41    0.0%    0.2%  LazyCompile: *onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+     38    0.0%    0.2%  Function: *wasm-function[1]
+     35    0.0%    0.2%  LazyCompile: *keys /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/lodash/lodash.js:13306:18
+     33    0.0%    0.2%  LazyCompile: *toString buffer.js:771:46
+     32    0.0%    0.2%  Function: *wasm-function[0]
+     30    0.0%    0.2%  LazyCompile: *decodeMessages /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v4/decodeMessages.js:11:24
+     28    0.0%    0.2%  LazyCompile: *shiftRightUnsigned /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:1173:63
+     28    0.0%    0.2%  LazyCompile: *negate /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:767:39
+     28    0.0%    0.2%  LazyCompile: *forEach /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/lodash/lodash.js:9340:21
+     25    0.0%    0.1%  LazyCompile: *and /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:1092:33
+     23    0.0%    0.1%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     23    0.0%    0.1%  LazyCompile: *commitOffsetsIfNecessary /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/consumerGroup.js:287:33
+     21    0.0%    0.1%  RegExp: september
+     21    0.0%    0.1%  LazyCompile: *readInt32BE internal/buffer.js:468:21
+     17    0.0%    0.1%  LazyCompile: *Readable.read _stream_readable.js:368:35
+     16    0.0%    0.1%  LazyCompile: *step /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:26:22
+     16    0.0%    0.1%  LazyCompile: *onStreamRead internal/stream_base_commons.js:163:22
+     15    0.0%    0.1%  LazyCompile: *readableAddChunk _stream_readable.js:217:26
+     14    0.0%    0.1%  RegExp: \s{2,}
+     13    0.0%    0.1%  RegExp: november
+     13    0.0%    0.1%  RegExp: december
+     13    0.0%    0.1%  LazyCompile: *readInt64 /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:59:12
+     13    0.0%    0.1%  LazyCompile: *readInt32 /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:49:12
+     12    0.0%    0.1%  RegExp: january
+     12    0.0%    0.1%  LazyCompile: *processPromiseRejections internal/process/promises.js:171:34
+      8    0.0%    0.0%  LazyCompile: *writeInt32 /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/encoder.js:75:13
+      8    0.0%    0.0%  LazyCompile: *byteLength buffer.js:717:20
+      6    0.0%    0.0%  LazyCompile: *allocate buffer.js:404:18
+      5    0.0%    0.0%  LazyCompile: *findLeaderForPartitions /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/cluster/index.js:253:26
+      4    0.0%    0.0%  RegExp: october
+      4    0.0%    0.0%  LazyCompile: *module.exports /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/request.js:3:18
+      4    0.0%    0.0%  LazyCompile: *fromArrayLike buffer.js:486:23
+      4    0.0%    0.0%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/recordBatch/v0/decoder.js:86:37
+      4    0.0%    0.0%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:83:26
+      4    0.0%    0.0%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/offsetManager/index.js:226:12
+      3    0.0%    0.0%  RegExp: march
+      3    0.0%    0.0%  RegExp: jan
+      3    0.0%    0.0%  LazyCompile: *offsetCommit /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/broker/index.js:444:21
+      3    0.0%    0.0%  LazyCompile: *hidden internal/errors.js:281:25
+      3    0.0%    0.0%  LazyCompile: *getEncodingOps buffer.js:674:24
+      3    0.0%    0.0%  LazyCompile: *compare /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:736:41
+      3    0.0%    0.0%  LazyCompile: *<anonymous> internal/validators.js:81:3
+      3    0.0%    0.0%  LazyCompile: *<anonymous> internal/util/debuglog.js:61:18
+      3    0.0%    0.0%  LazyCompile: *<anonymous> buffer.js:353:36
+      3    0.0%    0.0%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/index.js:59:53
+      2    0.0%    0.0%  RegExp: mar
+      2    0.0%    0.0%  RegExp: february
+      2    0.0%    0.0%  LazyCompile: *writeInt32BE internal/buffer.js:880:22
+      2    0.0%    0.0%  LazyCompile: *readBytes /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:97:12
+      2    0.0%    0.0%  LazyCompile: *readArray /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:129:12
+      2    0.0%    0.0%  LazyCompile: *encodeTopic /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v7/request.js:63:21
+      2    0.0%    0.0%  LazyCompile: *emit /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/instrumentation/emitter.js:17:7
+      2    0.0%    0.0%  LazyCompile: *FastBuffer internal/buffer.js:945:1
+      2    0.0%    0.0%  LazyCompile: *Decoder /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:24:14
+      1    0.0%    0.0%  RegExp: apr
+      1    0.0%    0.0%  RegExp: ^-?\d+$
+      1    0.0%    0.0%  LazyCompile: *writeU_Int32BE internal/buffer.js:791:24
+      1    0.0%    0.0%  LazyCompile: *writeInt16BE internal/buffer.js:884:22
+      1    0.0%    0.0%  LazyCompile: *requestInfo /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:10:21
+      1    0.0%    0.0%  LazyCompile: *readInt8 /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:29:11
+      1    0.0%    0.0%  LazyCompile: *readArrayAsync /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:159:23
+      1    0.0%    0.0%  LazyCompile: *normalizeString path.js:52:25
+      1    0.0%    0.0%  LazyCompile: *module.exports /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/utils/flatten.js:1:18
+      1    0.0%    0.0%  LazyCompile: *listenerCount events.js:581:23
+      1    0.0%    0.0%  LazyCompile: *getDefaultTriggerAsyncId internal/async_hooks.js:273:34
+      1    0.0%    0.0%  LazyCompile: *fetch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/consumerGroup.js:316:14
+      1    0.0%    0.0%  LazyCompile: *destroyHooksExist internal/async_hooks.js:318:27
+      1    0.0%    0.0%  LazyCompile: *decodeZigZag64 /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:20:24
+      1    0.0%    0.0%  LazyCompile: *committedOffsets /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/offsetManager/index.js:363:19
+      1    0.0%    0.0%  LazyCompile: *checkBounds internal/buffer.js:43:21
+      1    0.0%    0.0%  LazyCompile: *alloc buffer.js:366:30
+      1    0.0%    0.0%  LazyCompile: *__awaiter /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:21:54
+      1    0.0%    0.0%  LazyCompile: *__awaiter /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:21:54
+      1    0.0%    0.0%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:740:37
+      1    0.0%    0.0%  LazyCompile: *Batch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:10:14
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/subscriptionState.js:92:62
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/offsetManager/index.js:259:22
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:33:15
+
+ [C++]:
+   ticks  total  nonlib   name
+   1772    1.2%    9.8%  epoll_pwait
+   1113    0.7%    6.2%  __libc_read
+    935    0.6%    5.2%  __pthread_cond_signal
+    711    0.5%    3.9%  __libc_malloc
+    689    0.5%    3.8%  v8::internal::MarkingBarrier(v8::internal::HeapObject, v8::internal::FullObjectSlot, v8::internal::Object)
+    674    0.4%    3.7%  v8::internal::heap_internals::GenerationalBarrierInternal(v8::internal::HeapObject, unsigned long, v8::internal::HeapObject)
+    655    0.4%    3.6%  cfree
+    318    0.2%    1.8%  do_futex_wait.constprop.1
+    232    0.2%    1.3%  mprotect
+    209    0.1%    1.2%  __pthread_cond_timedwait
+    199    0.1%    1.1%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+    166    0.1%    0.9%  v8::internal::Builtin_NumberPrototypeToString(int, unsigned long*, v8::internal::Isolate*)
+    161    0.1%    0.9%  void node::StreamBase::JSMethod<&node::StreamBase::WriteBuffer>(v8::FunctionCallbackInfo<v8::Value> const&)
+    141    0.1%    0.8%  v8::internal::Builtin_JsonParse(int, unsigned long*, v8::internal::Isolate*)
+     93    0.1%    0.5%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+     82    0.1%    0.5%  operator new(unsigned long)
+     79    0.1%    0.4%  mmap
+     79    0.1%    0.4%  __lll_lock_wait
+     72    0.0%    0.4%  __GI___pthread_mutex_lock
+     71    0.0%    0.4%  munmap
+     70    0.0%    0.4%  __lll_unlock_wake
+     69    0.0%    0.4%  _init
+     64    0.0%    0.4%  v8::internal::FixedArray::set(int, v8::internal::Object)
+     61    0.0%    0.3%  v8::internal::Worklist<std::pair<v8::internal::HeapObject, int>, 256>::View::Push(std::pair<v8::internal::HeapObject, int>) [clone .isra.347]
+     60    0.0%    0.3%  v8::internal::Builtins::builtin(int)
+     53    0.0%    0.3%  v8::ArrayBuffer::GetContents()
+     50    0.0%    0.3%  write
+     46    0.0%    0.3%  operator delete(void*)
+     41    0.0%    0.2%  node::Buffer::(anonymous namespace)::ParseArrayIndex(node::Environment*, v8::Local<v8::Value>, unsigned long, unsigned long*)
+     39    0.0%    0.2%  __GI___pthread_mutex_unlock
+     36    0.0%    0.2%  node::NodePlatform::CurrentClockTimeMillis()
+     35    0.0%    0.2%  v8::internal::Builtin_TypedArrayPrototypeBuffer(int, unsigned long*, v8::internal::Isolate*)
+     31    0.0%    0.2%  node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     29    0.0%    0.2%  v8::internal::ReadOnlyHeap::GetReadOnlyRoots(v8::internal::HeapObject)
+     28    0.0%    0.2%  v8::String::NewFromUtf8(v8::Isolate*, char const*, v8::NewStringType, int)
+     28    0.0%    0.2%  node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     21    0.0%    0.1%  epoll_ctl
+     19    0.0%    0.1%  void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     19    0.0%    0.1%  node::NodePlatform::CallOnWorkerThread(std::unique_ptr<v8::Task, std::default_delete<v8::Task> >)
+     18    0.0%    0.1%  v8::ArrayBufferView::ByteLength()
+     18    0.0%    0.1%  node::InternalCallbackScope::Close()
+     18    0.0%    0.1%  __pthread_cond_wait
+     14    0.0%    0.1%  v8::Value::IntegerValue(v8::Local<v8::Context>) const
+     14    0.0%    0.1%  fwrite
+     14    0.0%    0.1%  __libc_write
+     13    0.0%    0.1%  v8::internal::libc_memchr(void*, int, unsigned long)
+     12    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+     12    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+     12    0.0%    0.1%  node::StreamBase::CallJSOnreadMethod(long, v8::Local<v8::ArrayBuffer>, unsigned long, node::StreamBase::StreamBaseJSChecks)
+     11    0.0%    0.1%  v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*)
+     10    0.0%    0.1%  __pthread_cond_broadcast
+      9    0.0%    0.0%  v8::internal::Builtins::name(int)
+      9    0.0%    0.0%  v8::Context::Enter()
+      9    0.0%    0.0%  __libc_realloc
+      9    0.0%    0.0%  __GI___pthread_getspecific
+      9    0.0%    0.0%  _IO_vfprintf
+      8    0.0%    0.0%  v8::EscapableHandleScope::Escape(unsigned long*)
+      8    0.0%    0.0%  v8::Context::Exit()
+      7    0.0%    0.0%  v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+      7    0.0%    0.0%  v8::Value::IsArrayBufferView() const
+      7    0.0%    0.0%  v8::ArrayBufferView::ByteOffset()
+      7    0.0%    0.0%  node::NodePlatform::IdleTasksEnabled(v8::Isolate*)
+      7    0.0%    0.0%  node::Environment::Reallocate(char*, unsigned long, unsigned long)
+      7    0.0%    0.0%  node::EmitToJSStreamListener::OnStreamAlloc(unsigned long)
+      7    0.0%    0.0%  node::AsyncWrap::EmitTraceEventAfter(node::AsyncWrap::ProviderType, double)
+      7    0.0%    0.0%  getpagesize
+      6    0.0%    0.0%  v8::HandleScope::HandleScope(v8::Isolate*)
+      6    0.0%    0.0%  v8::ArrayBuffer::New(v8::Isolate*, void*, unsigned long, v8::ArrayBufferCreationMode)
+      6    0.0%    0.0%  node::InternalCallbackScope::InternalCallbackScope(node::Environment*, v8::Local<v8::Object>, node::async_context const&, int)
+      5    0.0%    0.0%  v8::internal::IsolateFromNeverReadOnlySpaceObject(unsigned long)
+      5    0.0%    0.0%  v8::Context::GetNumberOfEmbedderDataFields()
+      5    0.0%    0.0%  v8::ArrayBufferView::Buffer()
+      5    0.0%    0.0%  v8::(anonymous namespace)::CallDepthScope<true>::CallDepthScope(v8::internal::Isolate*, v8::Local<v8::Context>)
+      5    0.0%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      5    0.0%    0.0%  node::LibuvStreamWrap::OnUvRead(long, uv_buf_t const*)
+      5    0.0%    0.0%  node::Environment::RunWeakRefCleanup()
+      5    0.0%    0.0%  node::EmitToJSStreamListener::OnStreamRead(long, uv_buf_t const&)
+      4    0.0%    0.0%  v8::internal::String::Flatten(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType)
+      4    0.0%    0.0%  v8::internal::Isolate::native_context()
+      4    0.0%    0.0%  v8::Value::IsFunction() const
+      4    0.0%    0.0%  v8::TryCatch::~TryCatch()
+      4    0.0%    0.0%  v8::HandleScope::~HandleScope()
+      4    0.0%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      4    0.0%    0.0%  node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  node::task_queue::PromiseRejectCallback(v8::PromiseRejectMessage)
+      4    0.0%    0.0%  node::TraceEventScope::~TraceEventScope()
+      4    0.0%    0.0%  node::NodeArrayBufferAllocator::AllocateUninitialized(unsigned long)
+      4    0.0%    0.0%  node::LibuvStreamWrap::ReadStart()::{lambda(uv_handle_s*, unsigned long, uv_buf_t*)#1}::_FUN(uv_handle_s*, unsigned long, uv_buf_t*)
+      4    0.0%    0.0%  node::Environment::CheckImmediate(uv_check_s*)
+      4    0.0%    0.0%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+      4    0.0%    0.0%  calloc
+      4    0.0%    0.0%  bool v8::internal::MarkBit::Set<(v8::internal::AccessMode)0>() [clone .isra.74]
+      3    0.0%    0.0%  v8::internal::Zone::New(unsigned long)
+      3    0.0%    0.0%  v8::internal::SequentialStringKey<unsigned char>::IsMatch(v8::internal::String)
+      3    0.0%    0.0%  v8::internal::HandlerTable::HandlerTable(v8::internal::BytecodeArray)
+      3    0.0%    0.0%  v8::internal::HandleScope::~HandleScope()
+      3    0.0%    0.0%  v8::internal::Compiler::PostInstantiation(v8::internal::Handle<v8::internal::JSFunction>)
+      3    0.0%    0.0%  v8::internal::Builtin_DateNow(int, unsigned long*, v8::internal::Isolate*)
+      3    0.0%    0.0%  v8::String::Utf8Length(v8::Isolate*) const
+      3    0.0%    0.0%  v8::Isolate::ClearKeptObjects()
+      3    0.0%    0.0%  sysconf
+      3    0.0%    0.0%  std::ostream::sentry::sentry(std::ostream&)
+      3    0.0%    0.0%  non-virtual thunk to node::LibuvStreamWrap::GetAsyncWrap()
+      3    0.0%    0.0%  node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  node::NodeArrayBufferAllocator::Allocate(unsigned long)
+      3    0.0%    0.0%  node::LibuvStreamWrap::ReadStart()::{lambda(uv_stream_s*, long, uv_buf_t const*)#2}::_FUN(uv_stream_s*, long, uv_buf_t const*)
+      3    0.0%    0.0%  node::LibuvStreamWrap::Initialize(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void*)::{lambda(v8::FunctionCallbackInfo<v8::Value> const&)#1}::_FUN(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  node::InternalMakeCallback(node::Environment*, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*, node::async_context)
+      3    0.0%    0.0%  node::Environment::RunAndClearNativeImmediates(bool)
+      3    0.0%    0.0%  node::AsyncWrap::MakeCallback(v8::Local<v8::Function>, int, v8::Local<v8::Value>*)
+      3    0.0%    0.0%  node::AsyncWrap::EmitTraceEventBefore()
+      3    0.0%    0.0%  node::(anonymous namespace)::IsAnyArrayBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  _IO_file_xsputn
+      2    0.0%    0.0%  v8::internal::libc_memmove(void*, void const*, unsigned long)
+      2    0.0%    0.0%  v8::internal::Scope::AllocateVariablesRecursively()
+      2    0.0%    0.0%  v8::internal::RuntimeCallTimerScope::RuntimeCallTimerScope(v8::internal::Isolate*, v8::internal::RuntimeCallCounterId)
+      2    0.0%    0.0%  v8::internal::FunctionCallbackArguments::FunctionCallbackArguments(v8::internal::Isolate*, v8::internal::Object, v8::internal::HeapObject, v8::internal::Object, v8::internal::HeapObject, unsigned long*, int)
+      2    0.0%    0.0%  v8::internal::Builtin_ArrayConcat(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::Isolate::SetIdle(bool)
+      2    0.0%    0.0%  v8::Isolate::GetCurrentContext()
+      2    0.0%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)
+      2    0.0%    0.0%  operator delete[](void*)
+      2    0.0%    0.0%  node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::MakeCallback(v8::Isolate*, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*, node::async_context)
+      2    0.0%    0.0%  node::Environment::StartProfilerIdleNotifier()::{lambda(uv_check_s*)#2}::_FUN(uv_check_s*)
+      2    0.0%    0.0%  node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::AsyncWrap::EmitBefore(node::Environment*, double)
+      2    0.0%    0.0%  brk
+      2    0.0%    0.0%  __cxxabiv1::__vmi_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+      2    0.0%    0.0%  __clock_gettime
+      2    0.0%    0.0%  _IO_file_sync
+      2    0.0%    0.0%  _IO_default_xsputn
+      1    0.0%    0.0%  vsnprintf
+      1    0.0%    0.0%  void std::vector<int, v8::internal::ZoneAllocator<int> >::_M_emplace_back_aux<int>(int&&)
+      1    0.0%    0.0%  v8::internal::tracing::ScopedTracer::~ScopedTracer()
+      1    0.0%    0.0%  v8::internal::libc_memcpy(void*, void const*, unsigned long)
+      1    0.0%    0.0%  v8::internal::Variable* v8::internal::Scope::Lookup<(v8::internal::Scope::ScopeLookupMode)0>(v8::internal::VariableProxy*, v8::internal::Scope*, v8::internal::Scope*, v8::internal::Scope*, bool)
+      1    0.0%    0.0%  v8::internal::StringSearch<unsigned char, unsigned char>::SingleCharSearch(v8::internal::StringSearch<unsigned char, unsigned char>*, v8::internal::Vector<unsigned char const>, int)
+      1    0.0%    0.0%  v8::internal::Scope::ResolveVariablesRecursively(v8::internal::ParseInfo*)
+      1    0.0%    0.0%  v8::internal::Scope::DeclareLocal(v8::internal::AstRawString const*, v8::internal::VariableMode, v8::internal::VariableKind, bool*, v8::internal::InitializationFlag)
+      1    0.0%    0.0%  v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::LookupIterator::Configuration)
+      1    0.0%    0.0%  v8::internal::HandlerTable::NumberOfRangeEntries() const
+      1    0.0%    0.0%  v8::internal::HandlerTable::LookupReturn(int)
+      1    0.0%    0.0%  v8::internal::HandlerTable::HandlerTable(unsigned long, int, v8::internal::HandlerTable::EncodingMode)
+      1    0.0%    0.0%  v8::internal::HandleScopeImplementer::Detach(unsigned long*)
+      1    0.0%    0.0%  v8::internal::DeferredHandles::Iterate(v8::internal::RootVisitor*)
+      1    0.0%    0.0%  v8::internal::DeclarationScope::DeclarationScope(v8::internal::Zone*, v8::internal::Scope*, v8::internal::ScopeType, v8::internal::FunctionKind)
+      1    0.0%    0.0%  v8::internal::Compiler::FinalizeOptimizedCompilationJob(v8::internal::OptimizedCompilationJob*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      1    0.0%    0.0%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      1    0.0%    0.0%  v8::internal::CodeDesc::Initialize(v8::internal::CodeDesc*, v8::internal::Assembler*, int, int, int, int, int)
+      1    0.0%    0.0%  v8::internal::Builtin_ArrayBufferIsView(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Builtin_ArrayBufferConstructor_DoNotInitialize(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::AstValueFactory::GetOneByteStringInternal(v8::internal::Vector<unsigned char const>)
+      1    0.0%    0.0%  v8::internal::Accessors::IsJSObjectFieldAccessor(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Name>, v8::internal::FieldIndex*)
+      1    0.0%    0.0%  v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::internal::ZoneAllocationPolicy>::FillEmptyEntry(v8::base::TemplateHashMapEntry<void*, void*>*, void* const&, void* const&, unsigned int, v8::internal::ZoneAllocationPolicy)
+      1    0.0%    0.0%  v8::Value::IsSharedArrayBuffer() const
+      1    0.0%    0.0%  v8::Value::IsArrayBuffer() const
+      1    0.0%    0.0%  v8::TryCatch::TryCatch(v8::Isolate*)
+      1    0.0%    0.0%  v8::TryCatch::SetVerbose(bool)
+      1    0.0%    0.0%  v8::TryCatch::HasCaught() const
+      1    0.0%    0.0%  v8::String::WriteUtf8(v8::Isolate*, char*, int, int*, int) const
+      1    0.0%    0.0%  v8::Object::GetIsolate()
+      1    0.0%    0.0%  v8::Object::CreationContext()
+      1    0.0%    0.0%  v8::MicrotasksScope::PerformCheckpoint(v8::Isolate*)
+      1    0.0%    0.0%  v8::Isolate::SuppressMicrotaskExecutionScope::~SuppressMicrotaskExecutionScope()
+      1    0.0%    0.0%  v8::Isolate::SuppressMicrotaskExecutionScope::SuppressMicrotaskExecutionScope(v8::Isolate*)
+      1    0.0%    0.0%  v8::Isolate::InContext()
+      1    0.0%    0.0%  v8::HandleScope::CreateHandle(v8::internal::Isolate*, unsigned long)
+      1    0.0%    0.0%  v8::EscapableHandleScope::EscapableHandleScope(v8::Isolate*)
+      1    0.0%    0.0%  v8::(anonymous namespace)::CallDepthScope<true>::~CallDepthScope()
+      1    0.0%    0.0%  syscall
+      1    0.0%    0.0%  std::ostream::sentry::~sentry()
+      1    0.0%    0.0%  std::locale::id::_M_id() const
+      1    0.0%    0.0%  std::ios_base::_M_dispose_callbacks()
+      1    0.0%    0.0%  sigaddset
+      1    0.0%    0.0%  pthread_condattr_setclock
+      1    0.0%    0.0%  operator new[](unsigned long, std::nothrow_t const&)
+      1    0.0%    0.0%  operator new[](unsigned long)
+      1    0.0%    0.0%  operator new(unsigned long, std::nothrow_t const&)
+      1    0.0%    0.0%  node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::errors::TryCatchScope::~TryCatchScope()
+      1    0.0%    0.0%  node::StreamBase::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::PerIsolatePlatformData::PostNonNestableDelayedTask(std::unique_ptr<v8::Task, std::default_delete<v8::Task> >, double)
+      1    0.0%    0.0%  node::NodePlatform::MonotonicallyIncreasingTime()
+      1    0.0%    0.0%  node::NodePlatform::GetForegroundTaskRunner(v8::Isolate*)
+      1    0.0%    0.0%  node::Environment::RunAndClearInterrupts()
+      1    0.0%    0.0%  node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::AsyncWrap::EmitAfter(node::Environment*, double)
+      1    0.0%    0.0%  madvise
+      1    0.0%    0.0%  char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
+      1    0.0%    0.0%  __pthread_enable_asynccancel
+      1    0.0%    0.0%  __pthread_disable_asynccancel
+      1    0.0%    0.0%  __pthread_cond_init
+      1    0.0%    0.0%  __pthread_cond_destroy
+      1    0.0%    0.0%  __printf_fp
+      1    0.0%    0.0%  __new_sem_wait
+      1    0.0%    0.0%  __new_sem_post
+      1    0.0%    0.0%  __fmod_finite
+      1    0.0%    0.0%  __errno_location
+      1    0.0%    0.0%  __dynamic_cast
+      1    0.0%    0.0%  __cxxabiv1::__si_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+      1    0.0%    0.0%  __condvar_cancel_waiting
+      1    0.0%    0.0%  __GI___pthread_testcancel
+      1    0.0%    0.0%  __GI___pthread_mutex_destroy
+      1    0.0%    0.0%  _IO_padn
+
+ [Summary]:
+   ticks  total  nonlib   name
+   7741    5.1%   42.9%  JavaScript
+   9831    6.5%   54.5%  C++
+   8784    5.8%   48.7%  GC
+  133444   88.1%          Shared libraries
+    462    0.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+  84403   96.0%   55.7%  v8::internal::Builtin_JsonParse(int, unsigned long*, v8::internal::Isolate*)
+    807    0.9%    0.5%  v8::internal::Builtin_NumberPrototypeToString(int, unsigned long*, v8::internal::Isolate*)
+    779    0.9%    0.5%  node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    381    0.4%    0.3%  v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+    147    0.2%    0.1%  v8::internal::MarkingBarrier(v8::internal::HeapObject, v8::internal::FullObjectSlot, v8::internal::Object)
+    129    0.1%    0.1%  v8::internal::Builtin_ErrorConstructor(int, unsigned long*, v8::internal::Isolate*)
+     99    0.1%    0.1%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     93    0.1%    0.1%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+     87    0.1%    0.1%  v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+     82    0.1%    0.1%  v8::internal::Builtin_ArrayBufferConstructor_DoNotInitialize(int, unsigned long*, v8::internal::Isolate*)
+     71    0.1%    0.0%  v8::internal::heap_internals::GenerationalBarrierInternal(v8::internal::HeapObject, unsigned long, v8::internal::HeapObject)
+     60    0.1%    0.0%  v8::internal::Builtin_TypedArrayPrototypeBuffer(int, unsigned long*, v8::internal::Isolate*)
+     59    0.1%    0.0%  v8::internal::Builtins::builtin(int)
+     59    0.1%    0.0%  v8::internal::Builtin_ErrorCaptureStackTrace(int, unsigned long*, v8::internal::Isolate*)
+     53    0.1%    0.0%  v8::ArrayBuffer::GetContents()
+     51    0.1%    0.0%  __pthread_cond_signal
+     43    0.0%    0.0%  write
+     41    0.0%    0.0%  node::Buffer::(anonymous namespace)::ParseArrayIndex(node::Environment*, v8::Local<v8::Value>, unsigned long, unsigned long*)
+     36    0.0%    0.0%  node::NodePlatform::CurrentClockTimeMillis()
+     29    0.0%    0.0%  v8::internal::ReadOnlyHeap::GetReadOnlyRoots(v8::internal::HeapObject)
+     29    0.0%    0.0%  v8::internal::Builtin_ArrayConcat(int, unsigned long*, v8::internal::Isolate*)
+     28    0.0%    0.0%  v8::String::NewFromUtf8(v8::Isolate*, char const*, v8::NewStringType, int)
+     20    0.0%    0.0%  v8::internal::Builtin_DateNow(int, unsigned long*, v8::internal::Isolate*)
+     20    0.0%    0.0%  __libc_malloc
+     18    0.0%    0.0%  v8::ArrayBufferView::ByteLength()
+     16    0.0%    0.0%  mprotect
+     13    0.0%    0.0%  v8::internal::libc_memchr(void*, int, unsigned long)
+     13    0.0%    0.0%  v8::Value::IntegerValue(v8::Local<v8::Context>) const
+     13    0.0%    0.0%  _init
+     12    0.0%    0.0%  fwrite
+     11    0.0%    0.0%  cfree
+      9    0.0%    0.0%  __libc_write
+      9    0.0%    0.0%  __GI___pthread_mutex_lock
+      7    0.0%    0.0%  v8::Value::IsArrayBufferView() const
+      7    0.0%    0.0%  v8::ArrayBufferView::ByteOffset()
+      7    0.0%    0.0%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      6    0.0%    0.0%  node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.0%    0.0%  __GI___pthread_mutex_unlock
+      5    0.0%    0.0%  v8::ArrayBufferView::Buffer()
+      5    0.0%    0.0%  node::NodePlatform::IdleTasksEnabled(v8::Isolate*)
+      4    0.0%    0.0%  v8::internal::String::Flatten(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType)
+      4    0.0%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      4    0.0%    0.0%  node::task_queue::PromiseRejectCallback(v8::PromiseRejectMessage)
+      4    0.0%    0.0%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+      4    0.0%    0.0%  __lll_unlock_wake
+      3    0.0%    0.0%  void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  v8::internal::Zone::New(unsigned long)
+      3    0.0%    0.0%  v8::internal::SequentialStringKey<unsigned char>::IsMatch(v8::internal::String)
+      3    0.0%    0.0%  v8::internal::HandlerTable::HandlerTable(v8::internal::BytecodeArray)
+      3    0.0%    0.0%  v8::internal::HandleScope::~HandleScope()
+      3    0.0%    0.0%  v8::internal::Compiler::PostInstantiation(v8::internal::Handle<v8::internal::JSFunction>)
+      3    0.0%    0.0%  v8::internal::Builtins::name(int)
+      3    0.0%    0.0%  v8::String::Utf8Length(v8::Isolate*) const
+      3    0.0%    0.0%  v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*)
+      3    0.0%    0.0%  std::ostream::sentry::sentry(std::ostream&)
+      3    0.0%    0.0%  operator new(unsigned long)
+      2    0.0%    0.0%  v8::internal::libc_memmove(void*, void const*, unsigned long)
+      2    0.0%    0.0%  v8::internal::FixedArray::set(int, v8::internal::Object)
+      2    0.0%    0.0%  v8::HandleScope::HandleScope(v8::Isolate*)
+      2    0.0%    0.0%  operator delete(void*)
+      2    0.0%    0.0%  node::NodePlatform::CallOnWorkerThread(std::unique_ptr<v8::Task, std::default_delete<v8::Task> >)
+      2    0.0%    0.0%  node::(anonymous namespace)::IsAnyArrayBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  __cxxabiv1::__vmi_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+      2    0.0%    0.0%  __GI___pthread_getspecific
+      2    0.0%    0.0%  _IO_file_xsputn
+      2    0.0%    0.0%  _IO_file_sync
+      1    0.0%    0.0%  void std::vector<int, v8::internal::ZoneAllocator<int> >::_M_emplace_back_aux<int>(int&&)
+      1    0.0%    0.0%  void node::StreamBase::JSMethod<&node::StreamBase::WriteBuffer>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  v8::internal::libc_memcpy(void*, void const*, unsigned long)
+      1    0.0%    0.0%  v8::internal::Variable* v8::internal::Scope::Lookup<(v8::internal::Scope::ScopeLookupMode)0>(v8::internal::VariableProxy*, v8::internal::Scope*, v8::internal::Scope*, v8::internal::Scope*, bool)
+      1    0.0%    0.0%  v8::internal::StringSearch<unsigned char, unsigned char>::SingleCharSearch(v8::internal::StringSearch<unsigned char, unsigned char>*, v8::internal::Vector<unsigned char const>, int)
+      1    0.0%    0.0%  v8::internal::Scope::ResolveVariablesRecursively(v8::internal::ParseInfo*)
+      1    0.0%    0.0%  v8::internal::Scope::DeclareLocal(v8::internal::AstRawString const*, v8::internal::VariableMode, v8::internal::VariableKind, bool*, v8::internal::InitializationFlag)
+      1    0.0%    0.0%  v8::internal::Scope::AllocateVariablesRecursively()
+      1    0.0%    0.0%  v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::LookupIterator::Configuration)
+      1    0.0%    0.0%  v8::internal::HandlerTable::NumberOfRangeEntries() const
+      1    0.0%    0.0%  v8::internal::HandlerTable::LookupReturn(int)
+      1    0.0%    0.0%  v8::internal::HandlerTable::HandlerTable(unsigned long, int, v8::internal::HandlerTable::EncodingMode)
+      1    0.0%    0.0%  v8::internal::HandleScopeImplementer::Detach(unsigned long*)
+      1    0.0%    0.0%  v8::internal::DeclarationScope::DeclarationScope(v8::internal::Zone*, v8::internal::Scope*, v8::internal::ScopeType, v8::internal::FunctionKind)
+      1    0.0%    0.0%  v8::internal::Compiler::FinalizeOptimizedCompilationJob(v8::internal::OptimizedCompilationJob*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      1    0.0%    0.0%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      1    0.0%    0.0%  v8::internal::CodeDesc::Initialize(v8::internal::CodeDesc*, v8::internal::Assembler*, int, int, int, int, int)
+      1    0.0%    0.0%  v8::internal::Builtin_ObjectDefineProperty(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Builtin_DateConstructor(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Builtin_ArrayShift(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Builtin_ArrayBufferIsView(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::AstValueFactory::GetOneByteStringInternal(v8::internal::Vector<unsigned char const>)
+      1    0.0%    0.0%  v8::internal::Accessors::IsJSObjectFieldAccessor(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Name>, v8::internal::FieldIndex*)
+      1    0.0%    0.0%  v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::internal::ZoneAllocationPolicy>::FillEmptyEntry(v8::base::TemplateHashMapEntry<void*, void*>*, void* const&, void* const&, unsigned int, v8::internal::ZoneAllocationPolicy)
+      1    0.0%    0.0%  v8::Value::IsSharedArrayBuffer() const
+      1    0.0%    0.0%  v8::Value::IsArrayBuffer() const
+      1    0.0%    0.0%  v8::TryCatch::~TryCatch()
+      1    0.0%    0.0%  v8::TryCatch::SetVerbose(bool)
+      1    0.0%    0.0%  v8::TryCatch::HasCaught() const
+      1    0.0%    0.0%  v8::String::WriteUtf8(v8::Isolate*, char*, int, int*, int) const
+      1    0.0%    0.0%  v8::Object::GetIsolate()
+      1    0.0%    0.0%  v8::Isolate::SuppressMicrotaskExecutionScope::SuppressMicrotaskExecutionScope(v8::Isolate*)
+      1    0.0%    0.0%  v8::Isolate::InContext()
+      1    0.0%    0.0%  v8::Isolate::GetCurrentContext()
+      1    0.0%    0.0%  v8::HandleScope::~HandleScope()
+      1    0.0%    0.0%  syscall
+      1    0.0%    0.0%  std::ostream::sentry::~sentry()
+      1    0.0%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)
+      1    0.0%    0.0%  std::locale::id::_M_id() const
+      1    0.0%    0.0%  std::ios_base::_M_dispose_callbacks()
+      1    0.0%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      1    0.0%    0.0%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+      1    0.0%    0.0%  node::StreamBase::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::NodeArrayBufferAllocator::AllocateUninitialized(unsigned long)
+      1    0.0%    0.0%  node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  __lll_lock_wait
+      1    0.0%    0.0%  __libc_realloc
+      1    0.0%    0.0%  __fmod_finite
+      1    0.0%    0.0%  __errno_location
+      1    0.0%    0.0%  __dynamic_cast
+      1    0.0%    0.0%  __cxxabiv1::__si_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  124467   82.2%  /usr/bin/node
+  80188   64.4%    v8::internal::Builtin_JsonParse(int, unsigned long*, v8::internal::Isolate*)
+  28259   35.2%      LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+  28259  100.0%        /usr/bin/node
+  28186   99.7%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+  28093   99.7%            /usr/bin/node
+  27310   34.1%      LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+  27310  100.0%        /usr/bin/node
+  27244   99.8%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+  27167   99.7%            /usr/bin/node
+  12030   15.0%      LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+  12030  100.0%        /usr/bin/node
+  12030  100.0%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+  11986   99.6%            /usr/bin/node
+   6788    8.5%      /usr/bin/node
+   6788  100.0%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+   6768   99.7%          /usr/bin/node
+   6697   99.0%            /usr/bin/node
+     71    1.0%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+   4720    5.9%      LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:23:57
+   4720  100.0%        /usr/bin/node
+   4720  100.0%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+   4703   99.6%            /usr/bin/node
+  14744   11.8%    /usr/bin/node
+   4794   32.5%      LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+   4754   99.2%        /usr/bin/node
+   4688   98.6%          /usr/bin/node
+   4688  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     66    1.4%          node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+     66  100.0%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:69:35
+   2767   18.8%      LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+   1120   40.5%        /usr/bin/node
+   1118   99.8%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+   1117   99.9%            /usr/bin/node
+   1068   38.6%        LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+   1068  100.0%          /usr/bin/node
+   1068  100.0%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    554   20.0%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    549   99.1%          /usr/bin/node
+    538   98.0%            /usr/bin/node
+     11    2.0%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+   1802   12.2%      /usr/bin/node
+    697   38.7%        LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+    518   28.7%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    514   99.2%          /usr/bin/node
+    512   99.6%            /usr/bin/node
+    337   18.7%        LazyCompile: ~Batch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:10:14
+    293   86.9%          LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/consumerGroup.js:426:18
+    293  100.0%            /usr/bin/node
+     33    9.8%          /usr/bin/node
+     33  100.0%            /usr/bin/node
+     11    3.3%          LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/consumerGroup.js:405:52
+     11  100.0%            /usr/bin/node
+     50    2.8%        /usr/bin/node
+     37   74.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+      5   10.0%          /usr/bin/node
+      4   80.0%            LazyCompile: ~commitOffsets /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/offsetManager/index.js:237:22
+      1   20.0%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    8.0%          node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    4.0%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+      2  100.0%            /usr/bin/node
+      1    2.0%          LazyCompile: ~commitOffsets /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/offsetManager/index.js:237:22
+      1  100.0%            /usr/bin/node
+      1    2.0%          LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/consumerGroup.js:405:52
+      1  100.0%            /usr/bin/node
+     21    1.2%        LazyCompile: ~fulfillRequest /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/requestQueue/index.js:123:17
+     14   66.7%          LazyCompile: *onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+     14  100.0%            LazyCompile: *readableAddChunk _stream_readable.js:217:26
+      4   19.0%          LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+      4  100.0%            LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+      3   14.3%          LazyCompile: ~processData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:366:14
+      3  100.0%            LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+     21    1.2%        LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+     21  100.0%          /usr/bin/node
+     20   95.2%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+      1    4.8%            LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:23:46
+     20    1.1%        LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:61:46
+     16   80.0%          LazyCompile: *forEach /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/lodash/lodash.js:9340:21
+     16  100.0%            LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+      4   20.0%          /usr/bin/node
+      4  100.0%            LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+   1232    8.4%      LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+    839   68.1%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+    587   70.0%          LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+    587  100.0%            /usr/bin/node
+    252   30.0%          /usr/bin/node
+    251   99.6%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    207   16.8%        /usr/bin/node
+    203   98.1%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    200   98.5%            /usr/bin/node
+      3    1.5%            LazyCompile: ~onBatch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:265:21
+      3    1.4%          LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+      3  100.0%            LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+     91    7.4%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:23:57
+     91  100.0%          /usr/bin/node
+     91  100.0%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     55    4.5%        LazyCompile: *step /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:26:22
+     55  100.0%          /usr/bin/node
+     55  100.0%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    701    4.8%      LazyCompile: *fromString /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:220:20
+    527   75.2%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    527  100.0%          /usr/bin/node
+    517   98.1%            /usr/bin/node
+     10    1.9%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    123   17.5%        LazyCompile: *decodeRecords /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/recordBatch/v0/decoder.js:84:23
+    111   90.2%          LazyCompile: *decodeMessages /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v4/decodeMessages.js:11:24
+    111  100.0%            /usr/bin/node
+     12    9.8%          LazyCompile: ~decodeMessages /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v4/decodeMessages.js:11:24
+     12  100.0%            /usr/bin/node
+     26    3.7%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:23:57
+     26  100.0%          /usr/bin/node
+     26  100.0%            LazyCompile: ~Batch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:10:14
+      8    1.1%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/recordBatch/v0/decoder.js:86:37
+      8  100.0%          LazyCompile: *readArray /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:129:12
+      8  100.0%            LazyCompile: ~decodeRecords /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/recordBatch/v0/decoder.js:84:23
+    547    3.7%      LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+    537   98.2%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    529   98.5%          /usr/bin/node
+    517   97.7%            /usr/bin/node
+     12    2.3%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    1.5%          LazyCompile: ~onBatch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:265:21
+      8  100.0%            LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:302:22
+      8    1.5%        /usr/bin/node
+      8  100.0%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+      8  100.0%            /usr/bin/node
+    547    3.7%      LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+    324   59.2%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+    256   79.0%          /usr/bin/node
+    256  100.0%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     68   21.0%          LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+     68  100.0%            /usr/bin/node
+    142   26.0%        /usr/bin/node
+    119   83.8%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    117   98.3%            /usr/bin/node
+      2    1.7%            LazyCompile: ~onBatch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:265:21
+     18   12.7%          LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+     16   88.9%            /usr/bin/node
+      2   11.1%            LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+      3    2.1%          /usr/bin/node
+      3  100.0%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     28    5.1%        LazyCompile: *step /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:26:22
+     24   85.7%          /usr/bin/node
+     24  100.0%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     22    4.0%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:23:57
+     22  100.0%          /usr/bin/node
+     22  100.0%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     11    2.0%        LazyCompile: ~require internal/modules/cjs/helpers.js:76:31
+      6   54.5%          LazyCompile: ~3 /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/offsetCommit/index.js:29:6
+      6  100.0%            LazyCompile: ~offsetCommit /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/broker/index.js:444:21
+      5   45.5%          LazyCompile: ~7 /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/index.js:99:6
+      3   60.0%            LazyCompile: ~fetch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/broker/index.js:290:14
+      2   40.0%            LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/consumerGroup.js:405:52
+    479    3.2%      LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+    424    2.9%      LazyCompile: *fromValue /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:280:19
+    326   76.9%        LazyCompile: *decodeRecords /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/recordBatch/v0/decoder.js:84:23
+    296   90.8%          LazyCompile: *decodeMessages /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v4/decodeMessages.js:11:24
+    282   95.3%            /usr/bin/node
+     14    4.7%            LazyCompile: ~decodePartition /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v7/response.js:30:25
+     27    8.3%          LazyCompile: ~decodeMessages /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v4/decodeMessages.js:11:24
+     27  100.0%            /usr/bin/node
+     89   21.0%        LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:23:57
+     89  100.0%          /usr/bin/node
+     89  100.0%            LazyCompile: ~Batch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:10:14
+      5    1.2%        LazyCompile: ~module.exports /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/offsetManager/isInvalidOffset.js:4:18
+      5  100.0%          LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/offsetManager/index.js:281:36
+      4   80.0%            /usr/bin/node
+      1   20.0%            LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/offsetManager/index.js:286:12
+    294    2.0%      LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:23:57
+    183   62.2%        /usr/bin/node
+    182   99.5%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    182  100.0%            /usr/bin/node
+     99   33.7%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     96   97.0%          /usr/bin/node
+     95   99.0%            /usr/bin/node
+      1    1.0%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    3.0%          LazyCompile: ~onBatch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:265:21
+      3  100.0%            LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:302:22
+      4    1.4%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+      4  100.0%          LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+      4  100.0%            /usr/bin/node
+   4546    3.7%    LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+   4375   96.2%      /usr/bin/node
+   4364   99.7%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+   4357   99.8%          /usr/bin/node
+   4270   98.0%            /usr/bin/node
+     87    2.0%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    161    3.5%      LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+    161  100.0%        /usr/bin/node
+    161  100.0%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    161  100.0%            /usr/bin/node
+   4342    3.5%    LazyCompile: *toString buffer.js:771:46
+   4337   99.9%      LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+   4337  100.0%        /usr/bin/node
+   4337  100.0%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+   4324   99.7%            /usr/bin/node
+   2162    1.7%    LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+   2097   97.0%      /usr/bin/node
+   1962   93.6%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+   1957   99.7%          /usr/bin/node
+   1957  100.0%            /usr/bin/node
+     97    4.6%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+     64   66.0%          /usr/bin/node
+     64  100.0%            LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     33   34.0%          LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+     33  100.0%            /usr/bin/node
+     33    1.6%        /usr/bin/node
+     31   93.9%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     31  100.0%            /usr/bin/node
+      2    6.1%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:69:35
+     35    1.6%      LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+     34   97.1%        LazyCompile: *readableAddChunk _stream_readable.js:217:26
+     34  100.0%          LazyCompile: *onStreamRead internal/stream_base_commons.js:163:22
+      1    2.9%        LazyCompile: ~emit events.js:260:44
+      1  100.0%          LazyCompile: ~addChunk _stream_readable.js:283:18
+      1  100.0%            LazyCompile: ~readableAddChunk _stream_readable.js:217:26
+
+   8750    5.8%  /lib/x86_64-linux-gnu/libc-2.27.so
+   7353   84.0%    /usr/bin/node
+   3014   41.0%      RegExp: january
+   2878   95.5%        LazyCompile: *onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+   2878  100.0%          LazyCompile: *readableAddChunk _stream_readable.js:217:26
+   2878  100.0%            LazyCompile: *onStreamRead internal/stream_base_commons.js:163:22
+    134    4.4%        LazyCompile: ~processData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:366:14
+    134  100.0%          LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+    134  100.0%            LazyCompile: ~emit events.js:260:44
+   2517   34.2%      LazyCompile: *fromArrayLike buffer.js:486:23
+   2517  100.0%        LazyCompile: *onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+   2517  100.0%          LazyCompile: *readableAddChunk _stream_readable.js:217:26
+   2517  100.0%            LazyCompile: *onStreamRead internal/stream_base_commons.js:163:22
+    974   13.2%      /usr/bin/node
+    909   93.3%        LazyCompile: *FastBuffer internal/buffer.js:945:1
+    521   57.3%          LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+    521  100.0%            LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+    275   30.3%          LazyCompile: *onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+    275  100.0%            LazyCompile: *readableAddChunk _stream_readable.js:217:26
+    113   12.4%          LazyCompile: ~processData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:366:14
+    113  100.0%            LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+     48    4.9%        LazyCompile: ~FastBuffer internal/buffer.js:945:1
+     48  100.0%          LazyCompile: ~processData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:366:14
+     48  100.0%            LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+    435    5.9%      LazyCompile: *_copyActual buffer.js:244:21
+    435  100.0%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+    435  100.0%          LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+    435  100.0%            LazyCompile: *readableAddChunk _stream_readable.js:217:26
+    155    2.1%      LazyCompile: *fromString /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/long/src/long.js:220:20
+    114   73.5%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    114  100.0%          /usr/bin/node
+    112   98.2%            /usr/bin/node
+      2    1.8%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+     35   22.6%        LazyCompile: *decodeRecords /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/recordBatch/v0/decoder.js:84:23
+     31   88.6%          LazyCompile: *decodeMessages /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v4/decodeMessages.js:11:24
+     31  100.0%            /usr/bin/node
+      3    8.6%          LazyCompile: ~decodeMessages /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v4/decodeMessages.js:11:24
+      3  100.0%            /usr/bin/node
+      1    2.9%          LazyCompile: *readArrayAsync /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/decoder.js:159:23
+      1  100.0%            LazyCompile: ~decodeResponse /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/protocol/requests/fetch/v7/response.js:40:24
+      2    1.3%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:23:57
+      2  100.0%          /usr/bin/node
+      2  100.0%            LazyCompile: ~Batch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:10:14
+    124    1.7%      LazyCompile: ~_copyActual buffer.js:244:21
+    102   82.3%        LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+    102  100.0%          LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+     87   85.3%            LazyCompile: *readableAddChunk _stream_readable.js:217:26
+     15   14.7%            LazyCompile: ~emit events.js:260:44
+     22   17.7%        LazyCompile: ~concat buffer.js:542:32
+     22  100.0%          LazyCompile: ~processData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:366:14
+     22  100.0%            LazyCompile: ~onData /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/network/connection.js:115:22
+    873   10.0%    v8::internal::Builtin_JsonParse(int, unsigned long*, v8::internal::Isolate*)
+    318   36.4%      LazyCompile: ~<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+    318  100.0%        /usr/bin/node
+    317   99.7%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    313   98.7%            /usr/bin/node
+      4    1.3%            LazyCompile: ~onBatch /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:265:21
+    302   34.6%      LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/kafka/Consumer.js:64:89
+    302  100.0%        /usr/bin/node
+    301   99.7%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    299   99.3%            /usr/bin/node
+    126   14.4%      LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/dist/handlers/UniqCounter.js:60:58
+    126  100.0%        /usr/bin/node
+    126  100.0%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+    126  100.0%            /usr/bin/node
+     59    6.8%      LazyCompile: *<anonymous> /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/batch.js:23:57
+     59  100.0%        /usr/bin/node
+     59  100.0%          LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     59  100.0%            /usr/bin/node
+     56    6.4%      /usr/bin/node
+     56  100.0%        LazyCompile: *processEachMessage /home/grubi/Documents/Arbeit/Bewerbungen/Doodle_24.04.2020/Challenge/data-engineer-challenge/node_modules/kafkajs/src/consumer/runner.js:153:27
+     56  100.0%          /usr/bin/node
+     54   96.4%            /usr/bin/node
+      2    3.6%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+
+   1772    1.2%  epoll_pwait
+
