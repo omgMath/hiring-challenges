@@ -13,6 +13,7 @@ const config: IConfig = {
         ],
         "groupId": "user-stream",
         "consumers": [
+            // Uncomment the following lines if you want to print out all the objects the consumer recieves
             // {
             //     id: "stdout-handler",
             //     type: EKafkaConsumerType.stdout,
