@@ -71,7 +71,7 @@ The data structure is simple and could be directly consumed by an API/Charting l
 
 ## Next steps
 I did not finish all the tasks. The following would have been my next steps:
-- Implement a *Producer*-equivalent of the (Consumer)[../src/kafka/Consumer.ts], use this Producer to output the results into a new topic.
+- Implement a *Producer*-equivalent of the [Consumer](../src/kafka/Consumer.ts), use this Producer to output the results into a new topic.
 - Think about how to optimize the JSON parsing - without falling into the pitfalls mentioned above.
 - Think and write about scaling.
 - Handle edge cases: Leap years.
