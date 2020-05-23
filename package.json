@@ -5,7 +5,8 @@
     "main": "lib/main.js",
     "scripts": {
         "build": "npx tsc --project ./tsconfig.json",
-        "watch-compile": "npx tsc --project ./tsconfig.json -w"
+        "watch-compile": "npx tsc --project ./tsconfig.json -w",
+        "profile": "NODE_ENV=production node --prof dist/main.js"
     },
     "author": "Nicola Gruber",
     "license": "ISC",
